@@ -1,0 +1,77 @@
+/* Fundo geral cromado com reflexo */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg,
+        #f0f0f0 0%,
+        #cfcfcf 15%,
+        #ffffff 30%,
+        #7f7f7f 50%,
+        #d9d9d9 70%,
+        #f0f0f0 100%
+    );
+    background-size: 300% 300%;
+    animation: shine 10s ease-in-out infinite;
+    font-family: Arial, sans-serif;
+}
+
+/* Animação de reflexo metálico */
+@keyframes shine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navbar estilo futurista cromado */
+.header {
+    background: linear-gradient(145deg, #f5f5f5, #bfbfbf, #e6e6e6);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    padding: 15px 30px;
+    backdrop-filter: blur(10px);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.nav img {
+    height: 90px;
+}
+
+.nav a {
+    font-weight: 600;
+    font-size: 22px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #b388ff; /* lilás metálico sólido */
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    color: #d4a5ff; /* lilás mais claro brilhante no hover */
+    text-shadow: 0 0 6px rgba(212, 165, 255, 0.8); /* brilho sutil */
+    transform: scale(1.05);
+}
+/* Banner */
+.banner {
+position: relative;
+    height: 70vh;
+    margin: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* faz o vídeo cobrir toda a área */
+    z-index: 0;
+}
