@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-box" id="login-box">
+      <h1>Login</h1>
+      <form>
+        <input type="email" placeholder="E-mail" required>
+        <input type="password" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+        <a href="#">Esqueci minha senha</a>
+        <p>Ainda não tem conta? <span onclick="toggleForm()">Cadastre-se</span></p>
+      </form>
+    </div>
+
+    <div class="form-box hidden" id="register-box">
+      <h1>Cadastro</h1>
+      <form>
+        <input type="text" placeholder="Nome completo" required>
+        <input type="email" placeholder="E-mail" required>
+        <input type="password" placeholder="Senha" required>
+        <input type="password" placeholder="Confirmar senha" required>
+        <button type="submit">Cadastrar</button>
+        <p>Já tem conta? <span onclick="toggleForm()">Entrar</span></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function toggleForm() {
+      document.getElementById("login-box").classList.toggle("hidden");
+      document.getElementById("register-box").classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>
